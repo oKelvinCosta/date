@@ -1,0 +1,421 @@
+
+#feedback_Submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #daffd8;
+    color: #1dc462;
+}
+
+.erro {
+    background-color: #ffe0d9;
+    color: #ff2b41;
+}
+
+.container_form {
+    position: relative;
+    max-width: 620px;
+    box-sizing: border-box;
+    padding: 60px 60px 60px 60px;
+    /*outline: 1px solid crimson;*/
+    box-shadow: 0 2px 6px rgba(168, 168, 168, 0.38);;
+    margin: auto;
+    margin-top: -10px;
+    background-color: #fff;
+}
+
+.title_form {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title_form span:first-child {
+    font-weight: 400;
+    font-size: 32px;
+    color: #484848;
+    font-family: Oswald, sans-serif;
+}
+
+.error {
+    display: inline-block;
+    color: #ff2b41;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* ---------------- INPUTS -----------------*/
+
+.label_material {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.label_material input, .label_material textarea {
+    border: none;
+    border-bottom: 1px solid #484848;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.label_material textarea {
+    text-indent: 8px;
+}
+
+.placeholder {
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    transition: all 0.3s ease;
+    color: #b2a8ad;
+    pointer-events: none;
+}
+
+.label_material textarea ~ .placeholder {
+    position: absolute;
+    left: 10px;
+    bottom: 18px;
+    transition: all 0.5s ease;
+    color: #b2a8ad;
+}
+
+.label_material input:focus ~ .placeholder {
+    left: 3px;
+    bottom: 30px;
+    font-size: 14px;
+    color: #b2a8ad;
+}
+
+.label_material textarea:focus ~ .placeholder {
+    left: 0px;
+    top: -21px;
+    font-size: 14px;
+    color: #b2a8ad;
+}
+
+.label_material input:valid ~ .placeholder {
+    left: 3px;
+    bottom: 30px;
+    font-size: 14px;
+}
+
+.label_material textarea:valid ~ .placeholder {
+    left: 0px;
+    top: -21px;
+    font-size: 14px;
+}
+
+.line_bottom, .line_bottomNew, .line_bottomAU {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease;
+    margin-left: 5px;
+}
+
+.label_material textarea ~ .line_bottom,
+.label_material textarea ~ .line_bottomNew,
+.label_material textarea ~ .line_bottomAU {
+    position: absolute;
+    bottom: 3px;
+    left: 0px;
+    width: 0;
+    height: 2px;
+    background-color: #484848;
+    transition: width 0.3s ease;
+}
+
+.label_material input:focus ~ .line_bottom,
+.label_material textarea:focus ~ .line_bottom,
+.label_material input:focus ~ .line_bottomNew,
+.label_material textarea:focus ~ .line_bottomNew,
+.label_material input:focus ~ .line_bottomAU,
+.label_material textarea:focus ~ .line_bottomAU {
+    width: 100%;
+    background-color: #484848;
+}
+
+/* VALID */
+.label_material input:valid ~ .line_bottom,
+.label_material textarea:valid ~ .line_bottom,
+.label_material input:valid ~ .line_bottomNew,
+.label_material textarea:valid ~ .line_bottomNew,
+.label_material input:valid ~ .line_bottomAU,
+.label_material textarea:valid ~ .line_bottomAU {
+    width: 100%;
+
+    transition: background-color 0.3s ease;
+}
+
+/* ---------------- fim INPUTS -----------------*/
+
+/* ---------------- INPUT FILE -----------------*/
+
+/*Container*/
+.material_file, .material_fileNew, .material_fileAU {
+    margin-bottom: 50px;
+    /*overflow: hidden;*/
+}
+
+/*Label button*/
+.label_file, .label_fileNew, .label_fileAU {
+    width: 170px;
+    float: left;
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.label_file i, .label_fileNew i, .label_fileAU i {
+    text-align: center;
+    font-style: normal;
+    font-size: 12px;
+    font-family: Oswald, sans-serif;
+    display: block;
+}
+
+/*Input File*/
+#file, #capa, #fileNew, #capaNew, #fileAU {
+    display: none;
+}
+
+/*Container Input e Line*/
+.material_file .label_material,
+.material_fileNew .label_material,
+.material_fileAU .label_material {
+    position: relative;
+    margin-bottom: 0;
+
+    display: inline-block;
+    /* float: left; */
+    margin-top: 15px;
+    width: calc(100% - 190px);
+}
+
+/*Input Text*/
+#name_file, #name_fileNew, #name_capa, #name_capaNew {
+    pointer-events: none;
+}
+
+/* ---------------- fim INPUT FILE -----------------*/
+
+/* ---------------- SELECT -----------------*/
+
+.label_material select {
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    color: #484848;
+    font-size: 16px;
+    height: 37px;
+    font-family: AvenirR;
+    outline: none;
+    width: 100%;
+}
+
+.label_material select:valid ~ .line_bottom,
+.label_material select:valid ~ .line_bottomNew
+.label_material select:valid ~ .line_bottomAU {
+    width: 100%;
+    background-color: #484848;
+}
+
+/* ---------------- fim SELECT -----------------*/
+
+/* ---------------- DATA -----------------*/
+
+.data_input .placeholder {
+    left: 0px;
+    bottom: 30px;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.data_input input {
+    color: #484848;
+}
+
+/* ---------------- fim DATA -----------------*/
+
+/* ---------------- CHECKBOXES -----------------*/
+
+.conteiner_check {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.conteiner_check input {
+    display: none;
+}
+
+.conteiner_check i {
+    height: 15px;
+    width: 15px;
+    border: 1px solid #484848;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.conteiner_check label {
+    color: #484848;
+    display: block;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.conteiner_check input:checked ~ i {
+    background-color: #ff6633;
+}
+
+.conteiner_check div {
+    color: #484848;
+}
+
+.conteiner_check .group_check {
+    text-indent: 20px !important;
+}
+
+/* ---------------- fim CHECKBOXES -----------------*/
+
+/* ---------------- FILE -----------------*/
+
+.existFileBg{
+    background-color: rgb(0, 165, 0) !important;
+}
+
+.notExistFileBg{
+    background-color: #ff2b41 !important;
+}
+
+
+/* ---------------- fim FILE -----------------*/
+
+/* ---------------- INPUT EMAIL -----------------*/
+
+.label_material input.mail:valid ~ .line_bottom,
+.label_material input.mail:valid ~ .line_bottomNew,
+.label_material input.mail:valid ~ .line_bottomAU {
+    width: 100%;
+    background-color: #484848;
+}
+
+/* ---------------- fim INPUT EMAIL -----------------*/
+
+.botao {
+    box-sizing: border-box;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: Oswald, sans-serif;
+    background-color: #fd6633;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #fd7c52;
+}
+
+.feedback, .feedbackNew, #feedback_check, #feedback_checkNew, .feedbackAU {
+    position: absolute;
+    left: 5px;
+    bottom: -17px;
+    color: #ff2b41;
+    font-size: 12px;
+}
+
+/* ---------------- MODAL -----------------*/
+
+.highlight {
+    position: fixed;
+    top: 0;
+    padding: 140px 10px 60px 10px !important;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.80);
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 9;
+}
+
+/* ---------------- fim MODAL -----------------*/
+
+/* ---------------- FORM PERFIL -----------------*/
+
+.material_file .img, .material_fileNew .img, .material_fileAU .img {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.material_file .legend, .material_fileNew .legend, .material_fileAU .img {
+    display: block;
+}
+
+.legend {
+    position: relative;
+}
+
+.legend span {
+    position: absolute;
+    width: 200px;
+}
+
+.material_file .placeholder, .material_fileNew .placeholder, .material_fileAU .placeholder {
+    font-size: 14px;
+}
+
+/* ---------------- fim FORM PERFIL -----------------*/
+
+#submit_refutar {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 420px) {
+    .container_form {
+        padding: 20px 20px 20px 20px;
+        margin: 0 10px;
+    }
+
+    .highlight {
+        padding: 80px 0 60px 0 !important;
+    }
+}
+
+/*@media screen and (max-width: 768px) {*/
+    /*.container_form {*/
+        /*margin: 0 10px;*/
+    /*}*/
+
+/*}*/
+
+
+
+
+
+/* ---------------- File já com arquivo -----------------*/
+
+
+
+
+/* ---------------- fimm File já com arquivo -----------------*/
+

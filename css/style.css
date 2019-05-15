@@ -1,0 +1,218 @@
+body {
+  margin: auto;
+}
+
+header {
+  width: calc(100% - 32.8%);
+  height: 100vh;
+  /* background-image: url("../img/New-York-USA-Manhattan-city-morning-dawn-skyscrapers-buildings_2560x1600.jpg"); */
+  background-color: #fd6633;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 32.8%;
+  background-color: #fff;
+  float: left;
+  height: 100vh;
+  right: 0;
+  position: relative;
+}
+
+.formulario {
+  padding: 10px;
+  margin: auto;
+  width: 61.9%;
+  position: absolute;
+  /*pai tem que ter altura para funcionar*/
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.formulario label {
+  margin-bottom: 50px;
+}
+
+.label_m input {
+  border-bottom: 1px solid #484848;
+}
+
+.submit_login {
+  padding: 10px 20px !important;
+}
+
+.esqueceu {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.esqueceu a {
+  font-size: 14px;
+  color: #fd6633;
+  transition: color 0.3s ease;
+}
+
+.esqueceu a:hover {
+  color: #fd7c52;
+}
+
+.direitos {
+  position: absolute;
+  width: 235px;
+  bottom: 10px;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.direitos li {
+  font-size: 11px;
+  color: #484848;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.send_email .action {
+  top: -130px !important;
+  width: 80% !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+*[class*="feedbackLogin"] {
+  font-size: 13px;
+  margin: 20px 0;
+  position: absolute;
+  top: -70px;
+  text-align: center;
+  width: 100%;
+}
+
+.feedbackLoginSucess {
+  color: #00a500;
+}
+
+.feedbackLoginError {
+  color: rgba(255, 56, 61, 1);
+}
+
+/* VALID */
+.label_material input:valid~.line_bottom,
+.label_material textarea:valid~.line_bottom {
+  width: 100%;
+  background-color: #FD6633;
+  transition: background-color 0.3s ease;
+}
+
+.action {
+  position: absolute;
+  top: -110px;
+  text-align: center;
+  width: 100%;
+  font-family: "Oswald";
+  font-size: 22px;
+}
+
+/*RESPONSIVO*/
+@media screen and (max-width: 1280px) {
+  header {
+    width: calc(100% - 45%);
+  }
+
+  .login {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    margin: auto;
+    /* background-image: url("../img/New-York-USA-Manhattan-city-morning-dawn-skyscrapers-buildings_2560x1600.jpg"); */
+    background-color: #fd6633;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  header {
+    height: 100px;
+    width: calc(100% - 40px);
+    background-image: none;
+    float: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  header img {
+    margin-top: 0px;
+    /*max-width: 0px; */
+    /*width: auto;*/
+    height: 100%;
+  }
+
+  .login {
+    width: calc(100% - 3.2%);
+    margin: auto;
+    background-color: #fff;
+    float: none;
+    right: 0;
+    position: relative;
+    padding-top: 10px;
+    height: calc(100% - 220px);
+    padding-bottom: 100px;
+  }
+
+  .formulario {
+    padding: 10px;
+    margin: auto;
+    width: 40%;
+    position: relative;
+    /*pai tem que ter altura para funcionar*/
+    top: 50%;
+    left: 0%;
+    display: block;
+    transform: translate(0, -50%);
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    height: 80px;
+  }
+
+  .login {
+    width: calc(100% - 3.2%);
+    margin: auto;
+    background-color: #fff;
+    float: none;
+    right: 0;
+    position: relative;
+    padding-top: 10px;
+    height: calc(100% - 195px);
+    padding-bottom: 100px;
+  }
+
+  .formulario {
+    width: 70%;
+  }
+}

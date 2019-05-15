@@ -1,0 +1,652 @@
+/* GENERAL -------------------------------------------------------*/
+
+.highlight {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -3;
+
+    pointer-events: none;
+    opacity: 0;
+}
+
+#modal, #modal_2 {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal .highlight, #modal_2 .highlight {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+    overflow: auto;
+}
+
+/* fim GENERAL -------------------------------------------------------*/
+
+/* MODAL CURSOS LISTA -------------------------------------------------------*/
+.cabecalho {
+    height: 35px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.cabecalho h3, .cabecalho h4 {
+    float: left;
+}
+
+.cabecalho h3 {
+    color: #ff8534;
+    font-family: Oswald, sans-serif;
+    font-size: 30px;
+}
+
+.cabecalho h4 {
+    font-size: 24px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 20px;
+    color: #484848;
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
+}
+
+.cabecalho a {
+    float: right;
+}
+
+.options {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.options li > span {
+    cursor: pointer;
+    max-width: 80%;
+    display: inline-block;
+}
+
+.modal_seta {
+    position: fixed;
+    max-width: 800px;
+    margin: auto;
+    height: 600px;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 9;
+}
+
+#modal .options li {
+    background-color: #f2f2f2;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    line-height: 45px;
+    position: relative;
+    height: 45px;
+}
+
+#modal .options li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #fda400;
+    top: 20px;
+    left: 14px;
+}
+
+#modal .options li a {
+    width: 24px;
+    height: 24px;
+}
+
+#modal .options li a img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+#modal .options span {
+    cursor: pointer;
+    display: inline-block;
+    width: calc(100% - 34px);
+    max-width: 100%;
+}
+
+#modal .options span {
+    text-indent: 20px;
+}
+
+@media screen and (max-width: 818px ) {
+    .modal_seta {
+        margin: auto 20px;
+    }
+
+}
+
+/* fim MODAL CURSOS LISTA -------------------------------------------------------*/
+
+/* MODAL INFO CURSO -------------------------------------------------------*/
+
+.info_curso {
+    display: block;
+    opacity: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+}
+
+.info_curso .page1 {
+    margin-top: 0;
+    width: 100%;
+
+    height: auto;
+    display: block;
+    float: left;
+
+}
+
+.info_curso > div {
+    max-width: 1220px;
+    margin: auto;
+    padding: 70px 20px 0px 20px;
+}
+
+.layout {
+
+    box-sizing: border-box;
+}
+
+.layout div {
+    float: left;
+    max-width: 1220px;
+    margin: auto;
+    width: 50%;
+}
+
+.info_options {
+    float: right;
+    margin-top: 23px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+}
+
+.info_options div {
+    float: left;
+}
+
+.info_options div:first-child {
+    color: #ffffff;
+    margin-top: 5px;
+    margin-right: 40px;
+}
+
+.info_options a {
+    padding: 10px 15px;
+    background-color: #484848;
+    color: #ffffff;
+}
+
+.info_options a:last-child {
+    background-color: #ff8534;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+/*=================== PAGE 1 =================*/
+
+.db {
+    display: block !important;
+}
+
+.page1 {
+    padding: 40px 40px 35px 40px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    height: 667px;
+}
+
+.page1 span {
+    font-family: Oswald, sans-serif;
+}
+
+.page1 .top {
+    border: 7px solid #00a3cf;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page1 .top .nome, .page1 .top .hora {
+    font-size: 72px !important;
+    line-height: 80px !important;
+    color: #002e7f;
+}
+
+.page1 .top .hora {
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+.page1 .top .sub {
+    color: #00a2ce;
+    text-align: right;
+    font-size: 30px !important;
+}
+
+.mid {
+    margin: 5px 0;
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.mid span {
+    font-size: 14px !important;
+    font-family: AvenirR, sans-serif;
+    color: #002e7f;
+}
+
+.bot span {
+    color: #002e7f;
+    font-size: 30px !important;
+}
+
+.bot .email {
+    float: left;
+}
+
+.bot .tel {
+    float: right;
+}
+
+.bot, .sub {
+    line-height: 45px !important;
+}
+
+/*=================== FIM PAGE 1 =================*/
+
+/*=================== PAGE 2 =================*/
+
+.page2 {
+    box-sizing: border-box;
+    background-color: #002e7f;
+    height: 667px;
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    max-width: calc(100% - 10px);
+    display: block;
+    float: left;
+
+}
+
+.dec {
+    padding: 40px 40px 230px 40px;
+    box-sizing: border-box;
+
+}
+
+.dec p {
+    text-align: justify;
+    margin-bottom: 5px;
+    font-family: AvenirR, sans-serif;
+    color: #ffffff;
+}
+
+.social {
+    padding: 0px 40px 190px 40px;
+    box-sizing: border-box;
+
+    position: absolute;
+    bottom: 0;
+
+}
+
+.social span {
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.social img {
+    margin-right: 5px;
+}
+
+.page2 .logo {
+    padding: 40px;
+    background: #ffffff;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.page2 .logo img {
+    height: 65px;
+}
+
+/*=================== FIM PAGE 2 =================*/
+
+#modal .info_curso {
+    overflow: auto;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    height: auto;
+    width: auto;
+    opacity: 1;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
+    pointer-events: auto;
+}
+
+@media screen and (max-width: 1513px) {
+    .info_curso > div {
+        max-width: 855px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .layout div {
+        float: none;
+        margin: auto;
+        width: 100%;
+    }
+
+    .info_curso > div {
+        max-width: 600px;
+        margin: auto;
+        padding: 50px 20px 0px 20px;
+    }
+
+    .layout > div:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .info_curso > div {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .layout {
+
+        box-sizing: border-box;
+    }
+
+    .layout div {
+        float: left;
+        width: 100%;
+    }
+
+    .layout div:first-child {
+        margin-bottom: 20px;
+    }
+
+    .info_options {
+        float: right;
+        margin-top: 20px;
+    }
+
+    .info_options div {
+        float: left;
+    }
+
+    .info_options > div:first-child {
+        color: #ffffff;
+        margin-top: 5px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
+    .info_options a {
+        padding: 10px 15px;
+        background-color: #484848;
+        color: #ffffff;
+    }
+
+    .info_options a:last-child {
+        background-color: #ff8534;
+        color: #ffffff;
+        margin-right: 20px;
+    }
+
+}
+
+/* fim MODAL INFO CURSO -------------------------------------------------------*/
+
+/* DESCONHECIDO -------------------------------------------------------*/
+
+.btns_perso {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 102px;
+}
+
+.btns_perso a {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: block;
+    background-color: #ff8534;
+    margin-bottom: 15px;
+    color: #ffffff;
+    width: 100px;
+    text-align: center;
+    float: none;
+}
+
+.btns_perso a:last-child {
+    border: 2px solid #ff8534;
+    padding: 8px 13px;
+    color: #ff8534;
+    background-color: transparent;
+
+}
+
+/* fim DESCONHECIDO -------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* MODAL EDITAR CURSO -------------------------------------------------------*/
+
+#modal_2 .title {
+    display: block;
+    padding: 120px 0px 40px 0px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#modal_2 .title span {
+    font-weight: bold;
+    font-size: 30px;
+    float: none;
+    margin-right: 10px;
+    color: #ffffff;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1.2px;
+}
+
+#modal_2 form {
+    margin: auto;
+    text-align: center;
+    max-width: 450px;
+}
+
+#modal_2 form input[type="submit"] {
+    height: 35px;
+    border: none;
+    background-color: #ff8534;
+    color: #fff;
+}
+
+#modal_2 form select {
+    height: 30px;
+    width: 100%;
+    text-indent: 5px;
+}
+
+#modal_2 .semana > div {
+    margin-bottom: 5px;
+    display: block;
+}
+
+#modal_2 .semana label {
+    float: left;
+    color: #fff;
+    cursor: pointer;
+}
+
+#modal_2 .semana input {
+    float: right;
+    margin-top: 2px;
+    position: relative;
+}
+
+#modal_2 input[type="checkbox"] {
+    border: none;
+    background-color: #ffffff;
+}
+
+#modal_2 #status, select {
+    cursor: pointer;
+}
+
+#modal_2 label[for="show_semana"] {
+    height: 28px;
+    border: 1px solid #484848;
+    color: #484848;
+    line-height: 30px;
+    text-align: left;
+    text-indent: 5px;
+    position: relative;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#modal_2 .semana br {
+}
+
+#modal_2 .semana {
+    display: none;
+}
+
+#modal_2 #show_semana:checked ~ .semana {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20%;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    background-color: #484848;
+}
+
+#modal_2 .plano {
+    border: 1px solid #484848;
+    width: 100%;
+    display: block;
+    text-align: left;
+    text-indent: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+    color: gainsboro;
+}
+
+#modal_2 .plano input {
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    color: gainsboro;
+}
+
+#modal_2 .semana input::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#modal_2 .semana input:checked::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: #ff8534;
+    margin: auto;
+}
+
+#modal_2 .add_user .label_m:last-child {
+    margin-bottom: 10px;
+}
+
+#modal_2 input, #modal_2 textarea {
+    background-color: transparent;
+    color: #fff;
+}
+
+/*======== FIM FORM ======*/
+
+@media screen and (max-width: 1140px) {
+    #modal_2 #show_semana:checked ~ .semana {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10%;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        background-color: #484848;
+    }
+}
+
+/* fim MODAL EDITAR CURSO -------------------------------------------------------*/
+
+
+

@@ -1,0 +1,51 @@
+
+html,body {
+    height: 100%;
+}
+#tudo {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 140px;
+    box-sizing: border-box;
+}
+footer {
+    min-height: 30px;
+    background-color: #484848;
+
+    position: absolute;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    line-height: 50px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+footer li {
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+}
+
+footer li span{
+    color: #dddddd;
+}
+
+@media screen and (max-width: 640px){
+    footer {
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer ul li {
+        line-height: 30px;
+    }
+
+}

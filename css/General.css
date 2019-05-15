@@ -1,0 +1,484 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+
+
+
+/*LEGENDA*/
+#legenda{
+    display: block;
+    margin-top: 20px;
+}
+
+.pointl{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+}
+
+
+#legenda li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #919191;
+}
+
+#legenda ul li:nth-child(1)  .pointl{
+    background-color: #1dc462 !important;
+}
+
+#legenda ul li:nth-child(2)  .pointl{
+    background-color: #4285f4 !important;
+}
+#legenda ul li:nth-child(3)  .pointl{
+    background-color: #f7f7f7 !important;
+}
+#legenda ul li:nth-child(4)  .pointl{
+    background-color: #ff2b41 !important;
+}
+
+
+/*FIM LEGENDA*/
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: AvenirR, sans-serif;
+}
+
+@font-face {
+    font-family: AvenirR;
+    src: url(../Fonts/Avenir/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: AvenirB;
+    src: url(../Fonts/Avenir/AvenirNextLTPro-Demi.otf);
+}
+
+
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+header{
+    overflow: hidden;
+}
+
+#add_user{
+    height:0 !important;
+}
+
+body{
+    overflow: auto;
+}
+
+
+.space_top_users{
+    margin-top: 60px;
+}.space_top{
+    margin-top: 80px;
+}
+.space_top_home{
+    margin-top: 100px;
+}
+.container {
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main_container{
+    margin-top: 140px !important;
+}
+
+#modal, #modal_2{
+    opacity:0;
+    transition: all 0.3s ease;
+}
+/*========== ORIENTADOR ==========*/
+
+.orientador {
+
+    display: block;
+    justify-content: space-between;
+    margin: 3.6% 0;
+}
+
+.title {
+    float: left;
+}
+.title span {
+    font-weight: 400;
+    font-size: 32px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #484848;
+    font-family: Oswald, sans-serif;
+}
+
+.pesq {
+    float: right;
+    margin-top: 10px;
+}
+
+
+.title a{
+    margin-right: 10px;
+}
+
+
+
+
+
+*[class*="arrowLeft"], *[class*="arrowRight"]{
+     height: 26px;
+    width: 26px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.arrowLeft, .arrowRight{
+    cursor: pointer;
+    transition: all 0.3s ease
+}
+
+
+.arrowLeft{
+    background-image: url("../img/icons/arrowLeft.svg");
+}
+
+.arrowRight{
+    background-image: url("../img/icons/arrowRight.svg");
+}
+
+
+.arrowLeft:hover{
+    background-image: url("../img/icons/arrowLeftHover.svg");
+}
+
+.arrowRight:hover{
+    background-image: url("../img/icons/arrowRightHover.svg");
+}
+
+
+
+.arrowLeft_off{
+    background-image: url("../img/icons/arrowLeftDesactive.svg");
+}
+
+.arrowRight_off{
+    background-image: url("../img/icons/arrowRightDesactive.svg");
+}
+
+
+
+
+
+
+
+
+
+input, select {
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    border: none;
+    margin-left: 5px;
+}
+select {
+    height: 33px;
+}
+
+input[type='submit'] {
+    background-color: #fd6633;
+    color: #ffffff;
+    margin-left: 0px !important;
+}
+
+
+
+@media screen and (max-width: 580px){
+
+    .container {
+        padding: 0 10px;
+    }
+
+
+
+    /*NAV AUXILIAR*/
+
+    .orientador {
+
+        display: block;
+        justify-content: space-between;
+        margin: 3.6% 0;
+    }
+
+
+
+    .title a:first-child, .title a:last-child {
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+
+
+    input, select {
+        padding: 7px;
+        box-sizing: border-box;
+        background-color: #e8e8e8;
+        border: none;
+    }
+
+
+    input[type='submit'] {
+        background-color: #fd6633;
+        color: #ffffff;
+    }
+
+
+    /*PESQUISA*/
+
+    .title a {
+        font-weight: 400;
+        font-size: 26px;
+    }
+
+    *[class*="arrowLeft"], *[class*="arrowRight"] {
+        height: 20px;
+        width: 20px;
+    }
+
+    #legenda {
+        margin-top: 10px;
+    }
+
+    .pesq{
+        margin-top: 10px;
+    }
+
+    /*PESQUISA*/
+
+    .pesq .input{
+        height: 33px;
+    }
+
+
+
+    .pesq .input:first-child{
+        margin-right: 5px;
+    }
+    .pesq .input{
+        float: left;
+        width: 50%;
+        height: 33px;
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+    }
+
+    .pesq .input:last-child{
+        margin-bottom: 0;
+    }
+
+    .pesq_x {
+        height: 25px;
+        width: 25px;
+        background-image: url("../img/icons/Search.svg");
+        display: block;
+        float: right;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .pesq_x:hover{
+        background-image: url("../img/icons/SearchHover.svg");
+    }
+
+
+
+    .pesq li{
+        overflow: hidden;
+        opacity:0;
+        height: 1px;
+        margin: 0;
+        transition: all 0.3s ease;
+    }
+
+
+
+    #toggle_pesq:checked ~ .pesq li {
+        opacity:1;
+        height: auto;
+        margin-top: 12px;
+    }
+
+
+
+    /*PESQUISA*/
+
+    /*PESQUISA*/
+
+
+    .space_top {
+        margin-top: 60px;
+    }
+
+    /*FIM NAV AUXILIAR*/
+}
+
+@media screen and (max-width: 320px){
+    .calendar_detail .pesq_x {
+        margin-top: 20px;
+    }
+}
+
+/*========== fim ORIENTADOR ==========*/
+
+
+
+/*========== INPUT ==========*/
+
+.label_m{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.label_m input, .label_m textarea {
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #484848;
+}
+
+.label_m span {
+    transition: all 0.4s;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.label_textarea span {
+    transition: all 0.4s;
+    width: 0;
+    position: absolute;
+    bottom: 2px !important;
+    left: 0;
+}
+.label_m input:focus ~ span, .label_m textarea:focus ~ span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(253, 132, 52, 0.61);
+    z-index: 9;
+}
+
+.label_m textarea:focus ~ span, .label_m textarea:valid ~ span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(253, 132, 52, 0.61);
+    z-index: 9;
+    bottom: 2px;
+}
+.label_m input:valid ~ span, .label_m textarea:valid ~ span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fd6633;
+    z-index: 9;
+}
+
+
+
+/*========== FIM INPUT ==========*/
+
+
+.title a {
+    letter-spacing: 1.5px!important;
+    font-family: Oswald;
+}
+
+
+.box {
+    box-shadow: 0 2px 6px rgba(168, 168, 168, 0.38);;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+/*============== TOGGLE PESQ LABEL =============*/
+.toggle_pesq{
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+/*======= SCROLL ========*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #c2c2c2;
+}
+
+@media screen and (max-width: 550px) {
+
+
+    /*::-webkit-scrollbar-track {*/
+        /*background-color: rgba(199, 199, 199, 1);*/
+
+    /*}*/
+
+
+
+    /*::-webkit-scrollbar-button{*/
+    /*width:10px;*/
+    /*height: 10px;*/
+    /*background-color: black;*/
+    /*}*/
+
+
+
+}
+
+/*======= FIM SCROLL ========*/
+
+
+@media screen and (max-width: 420px){
+    .main_container {
+        margin-top: 80px !important;
+        margin-bottom: 40px;
+    }
+    #container_dias{
+        margin-bottom: 30px;
+    }
+}

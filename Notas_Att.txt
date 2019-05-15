@@ -1,0 +1,20 @@
+Concertei erro arquivo [ Manutencao_Cursos.php ] linha 127
+
+Tirei do menu [ Parts/Menu.php ] e renomeei o arquivo [ Users.php ]
+
+Tirei < do arquivo [ Info_Curso.php ]
+
+comentei linha 128 [ Manutencao_Cursos.php ]
+
+
+Professor:
+prof@gmail.com
+prof
+
+Administrador:
+admin@gmail.com
+admin
+
+Secretaria:
+secret@gmail.com
+secret

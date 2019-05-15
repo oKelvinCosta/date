@@ -1,0 +1,411 @@
+.notifica_empty {
+  opacity: 0.25;
+}
+
+#menu_highlight {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+nav {
+  display: block;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 22.5px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 35px;
+}
+
+@media screen and (max-width: 510px) {
+  .logo {
+    text-align: left;
+    float: left;
+    padding-top: 22.5px;
+    position: relative;
+    left: 0;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  top: 0;
+  position: fixed;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  background-color: #ff6633;
+  z-index: 4;
+}
+
+.menu_list {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.menu_list li {
+  display: inline-block;
+  line-height: 80px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+.menu_list li:hover {
+  opacity: 0.75;
+  transition: all 0.3s;
+}
+
+.menu_list li:last-child {
+  margin: 0;
+}
+
+.menu_list li:first-child {
+  margin-right: 36px;
+}
+
+/*NOTIFICAÇÃO*/
+.icon_notifica {
+  border: 2px solid #ffffff;
+  width: 45px;
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.icon_notifica span {
+  color: #fd6633 !important;
+  font-family: AvenirR, sans-serif;
+}
+
+.icon_notifica span:first-child {
+  margin-right: 10px;
+}
+
+/*NOTIFICAÇÃO*/
+/*TOGGLE*/
+.menu_list li:last-child {
+  height: 35px;
+}
+
+.menu_list li:last-child label {
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu_list li:last-child label:hover .barra {
+  opacity: 0.75;
+}
+
+.barra {
+  display: block;
+  height: 3px;
+  width: 35px;
+  margin-top: 8px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.menu_list li:last-child label .barra:first-child {
+  margin-top: 4px !important;
+}
+
+/*FIM TOGGLE*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*======== FIM BARRA MENU ========*/
+/*==== MENU =====*/
+.toggle {
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #ffffff;
+  padding: 0 !important;
+  padding-bottom: 20px;
+  padding-top: 5% !important;
+  transition: all 0.3s ease;
+  z-index: 9;
+}
+
+.toggle h3 {
+  text-align: center;
+  color: #fd9701;
+  font-size: 24px;
+}
+
+.toggle_x {
+  float: right;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+.toggle_x div:first-child {
+  transform: rotate(45deg);
+  width: 29px;
+  height: 2px;
+  background-color: #fd9701;
+  margin-top: 10px;
+}
+
+.toggle_x div:last-child {
+  transform: rotate(135deg);
+  width: 30px;
+  height: 2px;
+  background-color: #fd9701;
+}
+
+.notifica {
+  overflow-y: auto;
+  height: 90vh;
+}
+
+.toggle ul, .notifica {
+  margin-top: 20px;
+}
+
+.toggle ul li {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle ul li:hover {
+  background-color: #f7f7f7;
+}
+
+.toggle ul li a {
+  color: #484848;
+  font-family: AvenirB;
+  padding: 5% 6%;
+  display: block;
+}
+
+/*ALAVANCA*/
+#toggle:checked~.toggle {
+  right: 0%;
+  opacity: 1;
+}
+
+/*==== MENU =====*/
+/*==== side ===*/
+.side {
+  width: 470px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #ffffff;
+  padding: 0 !important;
+  padding-top: 5% !important;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.side .top {
+  text-align: center;
+}
+
+.side h3 {
+  color: #fd9701;
+  font-size: 24px;
+}
+
+.side label {
+  z-index: 5 !important;
+}
+
+.notions {
+  cursor: pointer;
+  margin: 10px 20px 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.notions:hover {
+  background-color: #f7f7f7;
+}
+
+.notifica li {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.main {
+  margin-bottom: 20px;
+}
+
+.curso {
+  display: inline-block;
+  float: left;
+  font-size: 20px;
+  color: #484848;
+  font-family: Oswald, sans-serif;
+  width: 100%;
+  min-height: 60px;
+}
+
+.resp {
+  display: inline-block;
+  float: right;
+}
+
+.resp img {
+  width: 20px;
+}
+
+.resp a {
+  display: block;
+}
+
+.resp a:first-child {
+  margin-bottom: 10px;
+}
+
+.criador {
+  display: inline-block;
+  float: left;
+}
+
+.carg_h {
+  display: inline-block;
+  float: right;
+}
+
+/*ALAVANCA*/
+/*==== fim side ====*/
+@media screen and (max-width: 1380px) {
+  .toggle {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #ffffff;
+    padding: 0 !important;
+    padding-bottom: 20px;
+    padding-top: 5% !important;
+    transition: all 0.3s ease;
+    z-index: 9;
+  }
+
+  .side {
+    width: 470px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #ffffff;
+    padding: 0 !important;
+    padding-top: 5% !important;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .toggle ul li a {
+    padding: 4% 6%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .toggle ul li a {
+    padding: 5% 6%;
+  }
+
+  .toggle {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #ffffff;
+    padding: 0 !important;
+    padding-bottom: 20px;
+    padding-top: 8% !important;
+    transition: all 0.3s ease;
+    z-index: 9;
+  }
+
+  .side {
+    width: 470px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #ffffff;
+    padding: 0 !important;
+    padding-top: 8% !important;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 580px) {
+
+  /*MENU*/
+  .menu {
+    height: 60px;
+  }
+
+  .logo {
+    padding-top: 16px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  .menu_list {
+    height: 60px;
+  }
+
+  .toggle {
+    width: 80%;
+  }
+
+  /*MENU*/
+  /*SIDE*/
+  .side {
+    width: 80%;
+  }
+
+  /*SIDE*/
+}

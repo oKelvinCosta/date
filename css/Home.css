@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #484848;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.download{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icons/Download.svg");
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.download:hover{
+    background-image: url("../img/icons/DownloadHover.svg");
+}
+
+
+/*CALENDARIO*/
+
+
+/*POINTS ESTADO*/
+
+.point{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #fda400;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/* fim POINTS ESTADO*/
+
+
+.square {
+    display: block;
+    float: left;
+    height: 390px;
+    width: calc(25% - 15px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.square ul {
+    height: 290px;
+    overflow-y: auto;
+}
+.square ul li > span {
+    display: inline-block;
+}
+
+
+
+
+.square:nth-child(4){
+    margin-right: 0px;
+}
+.square:nth-child(8){
+    margin-right: 0px;
+}
+.square:nth-child(12){
+    margin-right: 0px;
+}
+
+
+
+
+.square header {
+    margin-bottom: 20px;
+}
+header h2, header a {
+    display: inline-block;
+}
+.square h2 {
+    color: #ff6633;
+    font-family: Oswald;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+
+.square li {
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    line-height: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.square li:hover {
+    background-color: #ffffff;
+}
+
+
+.square header a {
+    float: right;
+    margin-top: 4px;
+}
+.square ul li{
+    width: 99%;
+}
+.square ul li > a:first-child {
+    display: block;
+    padding: 10px;
+}
+.seta {
+    position: absolute;
+    cursor: pointer;
+    bottom: 15px;
+    right: 15px;
+}
+
+.img_calendar{
+    background-image: url("../img/icons/calendar.svg");
+    background-position: center center;
+    height: 32px;
+    width: 27px;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.img_calendar:hover{
+    background-image: url("../img/icons/calendarHover.svg");
+}
+
+/*FIM CALENDARIO*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ALTERAR CURSO  */
+
+label[for="alterar_1"] > span{
+    padding-top: 35px;
+}
+
+
+/*================ RESPONSIVE ================*/
+
+@media screen and (max-width:1600px) {
+
+    .square {
+        display: inline-block;
+        width: calc(33.3% - 13.3px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .square:nth-child(4) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(8) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(3) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(6) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(9) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(12) {
+        margin-right: 0px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:1260px) {
+
+    .square {
+        display: inline-block;
+        width: 48.35%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .square:nth-child(4) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(8) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(3) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(6) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(9) {
+        margin-right: 20px;
+    }
+
+    .square:nth-child(12) {
+        margin-right: 20px;
+    }
+
+
+
+
+    .square:nth-child(2) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(4) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(6) {
+        margin-right:0px;
+    }
+
+    .square:nth-child(8) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(10) {
+        margin-right: 0px;
+    }
+
+    .square:nth-child(12) {
+        margin-right: 0px;
+    }
+}
+
+
+
+@media screen and (max-width:800px) {
+
+    .square {
+        display: inline-block;
+        width: 100%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .square {
+        margin-right: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 580px){
+    /*NAV AUXILIAR*/
+
+
+
+
+
+    .title span:first-child, .title span:last-child {
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    input, select {
+        padding: 7px;
+        box-sizing: border-box;
+        background-color: #e8e8e8;
+        border: none;
+    }
+
+
+    input[type='submit'] {
+        background-color: #fd6633;
+        color: #ffffff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*FIM NAV AUXILIAR*/
+}
+
+/*================ FIM RESPONSIVE ================*/
+
+
+
+
+

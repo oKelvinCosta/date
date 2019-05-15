@@ -1,0 +1,467 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============ CALENDAR ==============*/
+
+
+.programacao{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.programacao .dia, .programacao ul {
+    float: left;
+}
+.dia {
+    padding-top: 40px;
+    width: 100px;
+    margin-right: 20px;
+    height: 175px;
+    box-sizing: border-box;
+}
+
+.dia span {
+    text-align: center;
+    display: block;
+    margin: 2px;
+}
+.dia_semana {
+    color: #484848;
+    font-size: 14px;
+}
+.dia_number {
+    font-size: 32px;
+    color: #ff8534;
+    font-family: Oswald, sans-serif;
+}
+
+
+.programacao ul {
+    background-color: #f2f2f2;
+    width: calc(100% - 120px);
+    padding: 20px;
+    box-sizing: border-box;
+    height: 175px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+}
+
+
+.programacao li {
+    width: 250px;
+    background-color: #ffffff;
+    display: inline-block;
+    margin-right: 18px;
+
+    white-space: normal;
+}
+.curso {
+    display: block;
+    margin-bottom: 10px;
+}
+.status, .status span {
+    font-family: Oswald;
+    font-weight: 300;
+}
+.hora {
+    float: left;
+    margin-top: 3px;
+}
+.status {
+    float: right;
+}
+.status span {
+    color: #00a500;
+}
+
+
+
+
+/*============ FIM CALENDAR ==============*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*== INFO CURSO ==*/
+
+/*TIRAR PADDING DO BOX E COLOCAR NO LABEL*/
+
+/*.box {*/
+    /*padding: 0px !important;*/
+/*}*/
+
+label[for="calendar_info_curso"]{
+    cursor: pointer;
+    display: block;
+    /*padding: 20px;*/
+    box-sizing: border-box;
+}
+
+.info_curso {
+    display: block;
+    opacity: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+
+    /*para não atrapalhar o fluxo*/
+    position: absolute;
+}
+
+#calendar_info_curso:checked ~ .info_curso {
+    overflow: auto;
+    position: fixed;
+    top:60px;
+    left:0;
+    bottom:0;
+    right:0;
+    display: block;
+    height: auto;
+    width: auto;
+    opacity: 1;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
+    pointer-events: auto;
+}
+.info_curso > div {
+    padding: 50px 20px 0px 20px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.layout {
+
+    box-sizing: border-box;
+}
+.layout div {
+    float: left;
+    width: calc(50% - 10px);
+
+}
+
+
+
+.info_options{
+    float: right;
+    margin-top: 20px;
+}
+
+.info_options div {
+    float: left;
+}
+
+.info_options div:first-child {
+    color: #ffffff;
+    margin-top: 5px;
+    margin-right: 40px;
+}
+
+
+
+
+/*== FIM INFO CURSO ==*/
+
+
+
+
+
+
+
+
+.orientador .title li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+.infoBoxCurso {
+    cursor: pointer;
+    height: 134px
+}
+
+.infoBoxCurso > a > div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+/*************************** RESPONSIVE ******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.seta {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 720px){
+
+    .boxT {
+        box-shadow: 0 2px 6px rgba(168, 168, 168, 0.38);
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .seta {
+        display: block;
+        float: right;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+
+    /*============ CALENDAR ==============*/
+
+    .programacao{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .programacao .dia, .programacao ul {
+        float: none;
+    }
+    .dia {
+        padding-top: 0px;
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        display: block;
+
+    }
+
+    .dia span {
+        text-align: center;
+        display: block;
+        margin: 2px;
+    }
+    .dia_semana {
+        color: #484848;
+
+    }
+    .dia_number {
+        font-size: 36px;
+        color: #ff8534;
+        font-family: Oswald, sans-serif;
+    }
+
+
+    .programacao ul {
+        background-color: #f2f2f2;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 390px;
+        overflow-y: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+
+    .programacao li {
+        width: 100%;
+        min-width: 245px;
+        background-color: #ffffff;
+        display: block;
+        margin-bottom: 20px;
+
+        white-space: normal;
+    }
+    .programacao li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .curso {
+        display: block;
+        float: none !important;
+        margin-bottom: 10px;
+        width: 100% !important;
+    }
+    .status, .status span {
+        font-family: OswaldL;
+    }
+    .hora {
+        float: left;
+        margin-top: 3px;
+    }
+    .status {
+        float: right;
+    }
+    .status span {
+        color: #00a500;
+    }
+
+
+
+
+    /*============ FIM CALENDAR ==============*/
+
+
+
+
+
+
+
+
+
+    /*=== MODAL SETA ===*/
+
+
+
+
+    .modal_seta {
+        position: fixed;
+        max-width:  800px;
+        margin: auto;
+        height: calc(100% - 120px);
+        top:60px;
+        bottom:0;
+        left:0;
+        right:0;
+        background-color: #ffffff;
+        z-index: 9;
+    }
+    @media screen and (max-width:818px ){
+        .modal_seta {
+            margin: auto 20px;
+
+        }
+
+    }
+
+    .cabecalho {
+        height: 35px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    .cabecalho h3, .cabecalho h4 {
+        float: left;
+    }
+
+    .cabecalho h3 {
+        color: #ff8534;
+        font-family: Oswald, sans-serif;
+        font-size: 30px;
+    }
+
+    .cabecalho h4 {
+        font-weight: bold;
+        font-size: 24px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 20px;
+        color: #484848;
+        font-family: OswaldL;
+    }
+
+    .cabecalho a{
+        float: right;
+    }
+
+    .options {
+        overflow-y: scroll;
+        height: 500px;
+    }
+
+    .options li span {
+        cursor: pointer;
+        max-width: 80%;
+        display: inline-block;
+    }
+    .modal_seta > ul {
+        height: calc(100% - 55px) !important;
+    }
+    #seta_calendar:checked ~ .highlight {
+        opacity: 1;
+        z-index: 1;
+        pointer-events: auto;
+    }
+
+
+    #seta_calendar:checked ~ .info_curso {
+        overflow: auto;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        height: auto;
+        width: auto;
+        opacity: 1;
+        z-index: 4;
+        background-color: rgba(0, 0, 0, 0.9);
+        pointer-events: auto;
+    }
+
+    /*=== FIM MODAL SETA ===*/
+
+}
+
+
+@media screen and (max-width: 810px){
+    .input {
+        width: calc(20% - 10px);
+    }
+    .input:nth-child(3){
+        margin-right: 5px;
+    }
+
+}
+
+
+@media screen and (max-width: 320px) {
+    .orientador .title {
+        max-width: calc(100% - 25px);
+    }
+}

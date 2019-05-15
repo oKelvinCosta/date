@@ -1,0 +1,175 @@
+
+
+
+
+
+#modal_2 .title {
+    display: block;
+    padding: 120px 0px 40px 0px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+#modal_2 .title span {
+    font-weight: bold;
+    font-size: 30px;
+    float: none;
+    margin-right: 10px;
+    color: #ffffff;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1.2px;
+}
+
+
+
+
+
+
+/*======== FORM ======*/
+
+
+#modal_2 form{
+    margin: auto;
+    text-align: center;
+    max-width: 450px;
+}
+
+#modal_2 form input[type="submit"]{
+    height: 35px;
+    border: none;
+    background-color: #ff8534;
+    color: #fff;
+}
+#modal_2 form select {
+    height: 30px;
+    width: 100%;
+    text-indent: 5px;
+}
+#modal_2 .semana > div {
+    margin-bottom: 5px;
+    display: block;
+}
+
+#modal_2 .semana label {
+    float: left;
+    color: #fff;
+    cursor: pointer;
+}
+
+#modal_2 .semana input{
+    float: right;
+    margin-top: 2px;
+    position: relative;
+}
+
+#modal_2 input[type="checkbox"]{
+    border: none;
+    background-color: #ffffff;
+}
+
+#modal_2 #status, select {
+    cursor: pointer;
+}
+#modal_2 label[for="show_semana"]{
+    height: 28px;
+    border: 1px solid #484848;
+    color: #484848;
+    line-height: 30px;
+    text-align: left;
+    text-indent: 5px;
+    position: relative;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#modal_2 .semana br {
+}
+#modal_2 .semana {
+    display: none;
+}
+#modal_2 #show_semana:checked ~ .semana {
+    display: block;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 20%;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    background-color: #484848;
+}
+
+#modal_2 .plano {
+    border: 1px solid #484848;
+    width: 100%;
+    display: block;
+    text-align: left;
+    text-indent: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+   color: gainsboro;
+}
+#modal_2 .plano input {
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    color: gainsboro;
+}
+
+
+
+
+#modal_2 .semana input::before {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    content: '';
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#modal_2 .semana input:checked::before {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    content: '';
+    background-color: #ff8534;
+    margin: auto;
+}
+
+#modal_2 .add_user .label_m:last-child {
+    margin-bottom: 10px;
+}
+
+#modal_2 input, #modal_2 textarea {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+
+/*======== FIM FORM ======*/
+
+@media screen and (max-width: 1140px){
+    #modal_2 #show_semana:checked ~ .semana {
+        display: block;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right: 10%;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        background-color: #484848;
+    }
+}

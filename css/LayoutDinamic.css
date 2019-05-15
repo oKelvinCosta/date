@@ -1,0 +1,881 @@
+@charset "UTF-8";
+/* CSS Document */
+/*-------- GENERAL --------*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+
+@font-face {
+    font-family: "AvenirR";
+    src: url("../Fonts/Avenir/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "AvenirB";
+    src: url("../Fonts/Avenir/AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+    font-family: "AvenirD";
+    src: url("../Fonts/Avenir/AvenirNextLTPro-Demi.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "AvenirR";
+    color: #484848;
+}
+.offpd {
+    display: none !important;
+}
+.offDesk {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.red {
+    color: #ff2b41;
+}
+
+.blue {
+    color: #4285f4;
+}
+
+.green {
+    color: #1dc462;
+}
+
+#tudo {
+    max-width: 1024px;
+    margin: auto;
+    box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.21);
+}
+
+.container {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.fullWidth {
+    padding: 0;
+}
+
+h1 {
+    font-family: Oswald;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#margem {
+    margin: 0 1.6%;
+}
+
+p {
+    line-height: 150%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.colorRed {
+    color: #E10019 !important;
+}
+
+/*-------- fim GENERAL --------*/
+
+/*-------- SCREEN --------*/
+
+/* Header */
+header h1 {
+    padding: 17px 0 25px 45px;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+/* Great Image */
+#great_image {
+    width: 100%;
+    height: 320px;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Curso Info */
+
+#curso_info {
+    padding: 30px 65px 65px 65px;
+}
+
+/* Main Info */
+#main_info {
+    width: 100%
+}
+
+#main_info div, h2 {
+    display: inline-block;
+}
+
+#main_info h2 {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Oswald;
+}
+
+#main_info h2:last-child {
+    display: block;
+    margin-top: 3px;
+}
+
+.h {
+    display: block;
+}
+
+.info_3 {
+    margin-top: 20px
+}
+
+.estado {
+    margin-left: 30px;
+}
+
+#descricao {
+    max-width: 60%;
+    float: left;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#side_info {
+    max-width: calc(48.1% - 20px);
+    margin-left: 20px;
+    float: left;
+}
+
+#side_info li {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+#side_info li h3 {
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#side_info li:nth-child(1), #side_info li:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+#main_info .right {
+    display: flex;
+    align-items: center;
+}
+
+.facebook_share {
+    display: inline-flex !important;
+}
+
+.toEmail {
+    margin-left: 10px;
+}
+
+.toEmail a {
+    font-size: 12px;
+    background-color: #e03535;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 5px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.toEmail a:hover {
+    filter: brightness(100%);
+}
+
+.diasSemanais div {
+    margin-bottom: 5px;
+}
+
+/*-------- fim SCREEN --------*/
+
+/*-------- CURSOS --------*/
+
+#cursos {
+    padding: 40px 65px 150px 65px;
+}
+
+#cursos h1 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Oswald;
+    float: left;
+}
+
+#cursos .cabecalho {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#cursos .cabecalho div {
+    float: right;
+}
+
+#cursos .cabecalho a {
+    cursor: pointer;
+    margin-top: 10px;
+    width: 26px;
+    height: 26px;
+    /*background-color: gray;*/
+    display: inline-block;
+}
+
+#cursos #Content {
+    position: relative;
+    padding-bottom: 25%;
+}
+
+#cursos #Content li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1.2s ease;
+}
+
+#prevC, #prevM {
+    background-image: url("../img/icons/arrowLeftD.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+#prevC:hover, #prevM:hover {
+    background-image: url("../img/icons/arrowLeftHoverD.svg");
+}
+
+#nextC, #nextM {
+    background-image: url("../img/icons/arrowRightD.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+#nextC:hover, #nextM:hover {
+    background-image: url("../img/icons/arrowRightHoverD.svg");
+}
+
+.desactiveL {
+    background-image: url("../img/icons/arrowLeftDesactive.svg") !important;
+}
+
+.desactiveR {
+    background-image: url("../img/icons/arrowRightDesactive.svg") !important;
+}
+
+.active {
+    opacity: 1 !important;
+    z-index: 5;
+    pointer-events: auto !important;
+}
+
+.active a {
+    transform: scale(1) !important;
+}
+
+#cursos #Content a {
+    width: 32.2%;
+    float: left;
+    display: block;
+    position: relative;
+
+}
+
+#cursos #Content a:nth-child(1), #cursos #Content a:nth-child(2) {
+    margin-right: 1.6%;
+}
+
+#cursos #Content .img {
+    height: 0;
+    padding-top: 100%;
+    width: 100%;
+    filter: saturate(50%) brightness(70%);;
+    box-shadow: 0px 5px 17px 0px rgba(0, 0, 0, 0.56);
+    transition: all 0.3s ease;
+}
+
+#cursos #Content a .title {
+    padding: 10px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 200;
+    font-family: Oswald;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 110%;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+#cursos #Content .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+#cursos #Content a:hover .img {
+
+    filter: saturate(90%) brightness(90%);
+}
+
+/*-------- fim CURSOS --------*/
+
+/*-------- NEWSLETER --------*/
+
+#newsletter {
+    position: relative;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+#newsletter h1 {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: Oswald;
+}
+
+#newsletter p.att {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: block;
+}
+
+/*-------- fim NEWSLETER --------*/
+
+/*-------- FOOTER --------*/
+
+footer .main {
+    padding: 30px 65px 30px 65px;
+    background-color: #484848;
+}
+
+footer .main h1 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Oswald;
+    margin-bottom: 5px;
+    color: #c5c5c5;
+    letter-spacing: 0.5px;
+}
+
+footer .main li {
+    float: left;
+    margin-right: 60px;
+    text-align: center;
+}
+
+footer .main li:last-child {
+    margin-right: 0px;
+    float: right;
+
+}
+
+footer .main p {
+    color: #fff;
+    font-size: 14px;
+}
+
+footer .sub {
+    background-color: #2d2d2d;;
+    padding: 15px 20px 15px 20px;
+    text-align: center;
+    box-shadow: inset 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+footer .sub li {
+    font-size: 12px;
+    display: inline-block;
+    color: #c1c1c1;
+}
+
+footer a:last-child {
+    margin-left: 10px;
+}
+
+footer a i {
+    color: #fff;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+footer a i:hover {
+    color: #c5c5c5;
+}
+
+/*-------- fim FOOTER --------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#side_info {
+    max-width: calc(40% - 7.3%);
+    margin-left: 7.3%;
+    float: left;
+}
+
+#side_info li:nth-child(1), #side_info li:nth-child(3) {
+    margin-right: 3.5%;
+}
+
+#side_info li:nth-child(2), #side_info li:nth-child(4) {
+    width: calc(50% - 3.5%);
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 887px) {
+
+    #descricao {
+        max-width: 50%;
+    }
+
+    #side_info {
+        max-width: calc(50% - 7.3%);
+        margin-left: 7.3%;
+        float: left;
+    }
+
+    #side_info li:nth-child(1), #side_info li:nth-child(3) {
+        margin-right: 4%;
+    }
+
+    #side_info li:nth-child(2), #side_info li:nth-child(4) {
+        width: calc(50% - 4%);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+	PRE TABLET
+================================================= */
+
+@media screen and (max-width: 900px) {
+    header h1 {
+        font-size: 48px;
+    }
+
+}
+
+/* ============================================
+	TABLET
+================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /*-------- SCREEN --------*/
+    /* Header */
+    .container {
+        padding: 0 3.2%;
+    }
+
+    header h1 {
+        padding: 17px 0 25px 0;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 110%;
+    }
+
+    /* Great Image */
+    #great_image {
+        width: 100%;
+        height: 220px;
+        background-image: url("novas-fotos-de-paisagens02.jpg");
+        background-position: center center;
+        background-size: cover;
+    }
+
+    /* Curso Info */
+    #curso_info {
+        padding: 20px 3.2% 60px 3.2%;
+    }
+
+    #main_info .left {
+        float: none;
+    }
+
+    #main_info .right {
+        display: block;
+        float: none;
+        margin-top: 30px;
+    }
+
+    #descricao {
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 30px;
+        float: none;
+    }
+
+    #side_info {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        float: none;
+    }
+
+    #side_info ul {
+        max-width: 380px;
+    }
+
+    #side_info li {
+        width: 50%;
+        display: block;
+        float: left;
+    }
+
+    #main_info .right {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .facebook_share {
+        display: inline-flex !important;
+    }
+
+    /*-------- fim SCREEN --------*/
+    /*-------- CURSOS --------*/
+    #cursos {
+        padding: 10px 3.2% 60px 3.2%;
+    }
+
+
+
+
+
+
+
+
+
+    #cursos h1 {
+        font-size: 26px;
+    }
+
+    #cursos .cabecalho {
+        margin-bottom: 20px;
+    }
+
+    /*-------- fim CURSOS --------*/
+    /*-------- NEWSLETER --------*/
+    #newsletter {
+        padding: 60px 3.2%;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #f2f2f2;
+    }
+
+    #newsletter h1 {
+        font-size: 26px;
+    }
+
+    #newsletter p.att {
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        display: block;
+    }
+
+    /*-------- fim NEWSLETER --------*/
+    footer .sub li, footer .main li {
+        margin-right: 0;
+        display: block;
+        width: 100%;
+
+    }
+
+    footer .main {
+        padding: 30px 20px 30px 20px;
+    }
+
+    footer .main li {
+        margin-bottom: 20px;
+    }
+
+    footer .main li:last-child {
+        margin-bottom: 0px;
+    }
+
+    footer .sub li:nth-child(2) {
+
+        margin: 10px 0;
+
+    }
+}
+
+/* ============================================
+	MOBILE
+================================================= */
+
+@media screen and (max-width: 420px) {
+
+    #slideMobile {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .offDesk {
+        display: block;
+    }
+
+    /*-------- SCREEN --------*/
+    header h1 {
+        padding: 17px 0 20px 0;
+        font-size: 26px;
+    }
+
+    #main_info .right {
+        display: block;
+        float: none;
+        margin-top: 20px;
+    }
+
+    #descricao {
+        font-size: 16px;
+    }
+
+    #main_info .right {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .facebook_share {
+        display: inline-flex !important;
+    }
+
+    /*-------- fim SCREEN --------*/
+    /*-------- CURSOS --------*/
+
+
+
+    #cursos {
+        position: relative;
+    }
+
+    #cursos #Content a {
+        width: 100%;
+        margin-bottom: 3.2%;
+
+        float: left;
+        display: block;
+        position: relative;
+
+        transform: scale(1);
+        transition: all 1.2s ease;
+    }
+
+    #cursos #Content a:nth-child(1), #cursos #Content a:nth-child(2) {
+        margin-right: 0%;
+    }
+
+    #cursos #Content a:last-child {
+        margin-bottom: 0;
+    }
+
+    #cursos {
+        padding: 10px 3.2% 60px 3.2%;
+    }
+
+
+
+
+
+    /*Tira espaço em branco dos cursos*/
+
+    #cursos .pd_b1{
+        padding-bottom: 100% !important;
+    }
+    #cursos .pd_b2{
+        padding-bottom: 200% !important;
+    }
+    #cursos .pd_bD{
+        padding-bottom: 300% !important;
+    }
+
+
+
+
+
+    #cursos h1 {
+        font-size: 26px;
+    }
+
+    #cursos .cabecalho {
+        margin-bottom: 20px;
+    }
+
+    /*-------- fim CURSOS --------*/
+
+}
+
+footer .main {
+    padding: 20px 20px 20px 20px;
+}
+
+footer .main li {
+    margin-bottom: 10px;
+}
+
+#FormNews .label_material {
+    max-width: 300px;
+    display: block;
+    margin: 35px auto;
+}
+
+#FormNews .label_material input {
+    text-align: center;
+    padding: 5px 0 !important;
+}
+
+#FormNews .label_material .placeholder {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#FormNews .label_material .line_bottom {
+    margin-left: 0;
+    background-color: #484848;
+}
+
+label[for="send"] {
+    cursor: pointer;
+}
+
+label[for="send"] img {
+    width: 35px;
+    transition: all 0.3s ease;
+    transform: rotate(-45deg);
+}
+
+label[for="send"]:hover img {
+    filter: brightness(80%);
+}
+
+label[for="send"] input {
+    display: none;
+}
+
+
+#feedback_Submit{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
+.success{
+    background-color: #daffd8;
+    color: #1dc462;
+}
+
+.error{
+    background-color: #ffe0d9;
+    color: #ff2b41;
+}
+
+
+footer .sub ul li:first-child{
+    display: block;
+    margin-bottom: 10px;
+    /*color: #dddddd;*/
+    color: #c1c1c1;
+}
+
+footer .sub ul li:first-child span{
+    color: #939393;
+}
