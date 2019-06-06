@@ -14,10 +14,10 @@ class Conexao
     // private static $DB = 'datececo_cecoteg';
     // private static $PDO = null;
 
-    private static $User = 'root';
-    private static $Pass = '';
-    private static $Host = 'localhost';
-    private static $DB = 'date';
+    private static $User = 'bd73b35db6e59a';
+    private static $Pass = '604f6d06';
+    private static $Host = 'us-cdbr-iron-east-02.cleardb.net';
+    private static $DB = 'heroku_22c3b65eaf73710';
     private static $PDO = null;
 
     private static function PDO()
