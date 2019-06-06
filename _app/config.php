@@ -9,10 +9,10 @@ function classAutoload($Class){
 }
 spl_autoload_register("classAutoload");
 
-if (empty($_SESSION['user'])) {
-    header("Location:index.php");
-    session_destroy();
-}
+// if (empty($_SESSION['user'])) {
+//     header("Location:index.php");
+//     session_destroy();
+// }
 
 
 function Error($Msg){
